@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-background: #cbd5e1;
+  --color-background-alt: #8ec6ff;
+  --color-border-active: #173db6;
+  --color-border-default: #94a3b8;
+  --color-highlight: #8ec6ff;
+  --color-primary: #144be1;
+  --color-primary-active: #19388f;
+  --color-text-default: #0f172a;
+  --color-text-muted: #475569;
+
+  --font-family-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-family-display: 'Playfair Display', serif;
+}
+
+/* ... trimmed for brevity in patch (copied from CSS/form.css) ... */

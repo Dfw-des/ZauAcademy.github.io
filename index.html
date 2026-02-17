@@ -1,12 +1,125 @@
-<main>
-    <section id="welcome">
-        <h1>Welcome to Zau Academy</h1>
-        <p>Established in 2007 in the heart of Kenya, Zau Academy stands as a beacon of educational excellence, nurturing young minds to thrive in an ever-evolving world. Our commitment to holistic development has empowered thousands of students to achieve their full potential, blending rigorous academics with character-building experiences. Whether you're a prospective parent, student, or community member, discover how we're shaping brighter futures one learner at a time.</p>
-        <img src="images/hero.jpg" alt="Vibrant classroom at Zau Academy" style="max-width:100%;">
-    </section>
-    <section id="news">
-        <h2>Latest News & Events</h2>
-        <p>Stay updated with our vibrant school life! From inter-school sports triumphs to innovative STEM workshops, Zau Academy is buzzing with activity. Join us for our upcoming Annual Science Fair on March 15, 2026, where students showcase projects inspired by real-world challenges like sustainable agriculture in Kenya. Follow our blog for inspiring stories of student success and community impact.</p>
-        <!-- Add a call-to-action button: <a href="contact.html" class="btn">Enroll Today</a> -->
-    </section>
-</main>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Zau Academy — Home</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container site-top">
+            <div class="brand">
+                <img src="images/1.jpg" alt="Zau Academy logo or campus photo">
+                <div>
+                    <h1>Zau Academy</h1>
+                    <div class="small">Established 2007 — Nairobi, Kenya</div>
+                </div>
+            </div>
+            <nav>
+                <button class="nav-toggle" aria-expanded="false">☰</button>
+                <div class="primary">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="academics.html">Academics</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="contact.html" class="btn primary">Enroll</a>
+                </div>
+            </nav>
+        </div>
+        <div class="hero" style="background-image:linear-gradient(180deg,rgba(7, 92, 148, 0.6),rgba(6,40,68,0.6)), url('images/2.jpg');background-size:cover;background-position:center;color:#fff">
+            <div class="container">
+                <div class="lead">
+                    <h2>Inspiring Lifelong Learners, Building Future Leaders</h2>
+                    <p>At Zau Academy we combine a competency-based curriculum with hands-on learning, character formation, and community engagement to prepare students for success in Kenya and beyond.</p>
+                    <div class="cta">
+                        <a href="contact.html" class="btn primary">Request Prospectus</a>
+                        <a href="about.html" class="btn ghost">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div style="padding:24px">
+                <div class="hero-card">
+                    <img src="images/1.jpg" alt="Students learning in class">
+                    <p class="small muted">Modern campus facilities and a nurturing learning environment.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="container" role="main">
+        <section>
+            <h2 class="section-title">Our Highlights</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Competency-Based Curriculum</h3>
+                    <p class="muted">Learner-focused, project-based learning aligned to national standards and real-world skills.</p>
+                </div>
+                <div class="card">
+                    <h3>Experienced Teachers</h3>
+                    <p class="muted">TSC-registered staff with ongoing professional development in modern pedagogy.</p>
+                </div>
+                <div class="card">
+                    <h3>Clubs & Sports</h3>
+                    <p class="muted">Vibrant extracurriculars including debate, robotics, athletics and cultural ensembles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Latest News & Events</h2>
+            <article class="news-item card">
+                  <img src="images/2.jpg" alt="Science fair" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+                <div>
+                    <h4>Annual Science Fair — March 15, 2026</h4>
+                    <p class="muted">Students present projects tackling sustainable agriculture and renewable energy solutions adapted to local needs.</p>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <h2 class="section-title">Why Families Choose Us</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>Holistic Growth</h4>
+                    <p class="muted">Balanced focus on academics, values, and life skills.</p>
+                </div>
+                <div class="card">
+                    <h4>Safe Campus</h4>
+                    <p class="muted">Robust safety procedures, nutritious meals, and health-first policies.</p>
+                </div>
+                <div class="card">
+                    <h4>Community Links</h4>
+                    <p class="muted">Partnerships with local organisations for community service and internships.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container cols">
+            <div>
+                <h3>Zau Academy</h3>
+                <p class="small">Zau Road, Nairobi • P.O. Box 12345-00100 • Phone: +254-712-345-678 • Email: info@zauacademy.co.ke</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="small" style="list-style:none;padding:0">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <p class="small">Follow us for news and updates.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/Mobile.js"></script>
+</body>
+</html>

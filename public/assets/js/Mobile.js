@@ -1,3 +1,4 @@
+// Copied from JS/Mobile.js and adjusted for public folder
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile nav toggle
     var toggle = document.querySelector('.nav-toggle');
@@ -16,38 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact form: simple client-side handling
-    var form = document.getElementById('contactForm');
-    if(form){
-        form.addEventListener('submit', async function(e){
-            e.preventDefault();
-            var name = document.getElementById('name').value.trim();
-            var email = document.getElementById('email').value.trim();
-            var message = document.getElementById('message').value.trim();
-            var msg = document.getElementById('formMsg');
-            if(!name || !email || !message){
-                msg.style.display = 'block'; msg.textContent = 'Please complete all fields.'; return;
-            }
-            msg.style.display = 'block'; msg.textContent = 'Sending...';
-            try{
-                var resp = await fetch('/api/contact', {
-                    method: 'POST',
-                    headers: {'Content-Type':'application/json'},
-                    body: JSON.stringify({name:name,email:email,message:message})
-                });
-                var data = await resp.json();
-                if(resp.ok){
-                    msg.textContent = 'Thank you — your message was sent. We will contact you shortly.';
-                    form.reset();
-                } else {
-                    msg.textContent = data && data.error ? ('Error: '+data.error) : 'Failed to send message. Please try again later.';
-                }
-            } catch(err){
-                console.error(err);
-                msg.textContent = 'Network error. Please try again later.';
-            }
-        });
-    }
+    // Contact form: handled by Formspree (no local POST)
 
     // Simple gallery lightbox for images inside .gallery-grid
     var galleryImages = document.querySelectorAll('.gallery-grid img');
@@ -69,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 overlay.appendChild(big);
                 overlay.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
-                // trap focus to overlay
                 overlay.setAttribute('tabindex','-1'); overlay.focus();
             });
         });
